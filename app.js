@@ -13,6 +13,13 @@ function insertName(){
     console.log(listaAmigos);
 
 }
+
+document.getElementById('amigo').addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {  // Verifica se a tecla pressionada foi "Enter"
+        insertName();  // Chama a função
+    }
+});
+
 function exibirTexto(){
     let lista = document.getElementById("listaAmigos");
     lista.innerHTML = ""; // Limpa a lista antes de atualizar
