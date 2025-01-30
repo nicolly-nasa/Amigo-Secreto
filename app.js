@@ -14,10 +14,20 @@ function insertName(){
 
 }
 
+function sortearAmigo(){
+    let nomeAleatorio = Math.floor(Math.random() * listaAmigos.length);
+    let nomeSorteado = listaAmigos[nomeAleatorio];
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = "";
+    let item = document.createElement("li");
+    item.textContent = nomeSorteado;
+    resultado.appendChild(item);
+}
+
 document.getElementById('amigo').addEventListener("keypress", function(event) {
     if (event.key === "Enter") {  // Verifica se a tecla pressionada foi "Enter"
         insertName();  // Chama a função
-    }
+    }// Essa conditional vai fazer com que a função de Inserir nome tambem funione ao clicar enter.
 });
 
 function exibirTexto(){
